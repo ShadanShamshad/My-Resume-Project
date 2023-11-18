@@ -1,0 +1,269 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* container */
+.container{
+    width: 100%;
+    height: 100%;
+    max-width: 1400px;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Roboto', sans-serif;
+}
+/* left-section */
+.left-section{
+    width: 25%;
+    height: 100%;
+}
+/* blue-container */
+.blue-container{
+    display: flex;
+    flex-direction: column;
+    background-color: #0719a8;
+    height: calc(100vh - 70%) ;
+    justify-content: center;
+    align-items: center;
+    color:bisque;
+    padding-bottom: 10px;
+}
+.blue-container > h3{
+    font-size: medium;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+}
+.blue-container > h4{
+    font-size: small;
+    word-spacing: 1px;
+    margin-bottom: 5px;
+}
+.image{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+.link{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    cursor: pointer;
+}
+.link a{
+    text-decoration: none;
+    color: #fff;
+}
+.link a:hover{
+    transform: translateY(0);
+    opacity: 0.5;
+    cursor: pointer;
+}
+/* grey-section */
+.grey-section{
+    background-color: #333232;
+    color: white;
+    padding-left: 10px;
+}
+.phone:hover, .email:hover{
+    transform: translateY(0);
+    opacity: 0.5;
+    cursor: pointer;
+    
+}
+/* Contact Section */
+
+.contact-details{
+    display: flex;
+    flex-direction: column;
+    font-size: small;
+    gap: 3px;
+    margin-left: 10px;
+    padding-top: 10px; 
+}
+/* skill section */
+.skill{
+    margin-left: 15px;
+} 
+.skill > h2{
+    padding-top: 15px;
+    font-size: larger;
+}
+.sub-skill{
+    display: flex;
+    flex-direction: column;
+    padding: 1.4rem 0;
+    gap: 1rem;
+
+}
+/* progress bar */
+.progress h5{
+    margin-bottom: 10px;
+}
+.progress-bar{
+    width: 90%;
+    height: 0.3rem;
+    background-color: #ccc;
+    border-radius: 10rem;
+    box-shadow: 0 5rem 5rem 0;
+    position: relative;
+}
+.progress-bar::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: inherit;
+    background-color: #0921d9;
+    border-radius: 10px;
+}
+.bar1{
+    width: 95%;
+}
+.bar2{
+    width: 90%;
+}
+.bar3{
+    width: 80%;
+}
+.bar4{
+    width: 70%;
+}
+.bar5{
+    width: 60%;
+}
+.bar6{
+    width: 80%;
+}
+.bar7{
+    width: 85%;
+}
+.bar8{
+    width: 70%;
+}
+.certificate-section{
+    padding-bottom: 10px;
+    
+}
+
+.certificate-section h5{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    word-spacing: 1rem;
+}
+
+.certificate-heading{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;  
+    
+}
+/* right-section */
+.right-section{
+    width: 75%;
+    height: 100%;
+    padding: 20px 20px;
+    background-color: #f2f6f8;
+    background-image: url(paper.gif);
+}
+.right-section h2{
+    color: #0719a8;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: 'Courgette', cursive;
+}
+.right-section p{
+    font-size: medium;
+    font-weight: 300;
+    padding: 5px 10px;
+}
+
+/* project section */
+
+.project-grid-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    color: #fff;
+    margin-bottom: 0;
+}
+/* .project-grid-container hr{
+    margin-bottom: 10px;
+} */
+.image-overlay{
+    position: relative;
+    overflow: hidden;
+    margin-top: 10px;
+    gap: 10px 5px;
+
+}
+.image-overlay .overlay{
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 70%;
+    background-color: #7b96f8;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(50%);
+    transition: all 0.3s linear;
+    border-radius: 7px;
+}
+.image-overlay:hover > .overlay{
+    transform: translateY(0);
+    opacity: 0.8;
+    cursor: pointer;
+}
+.image-overlay img{
+    border-radius: 7px;
+    width: 90%;
+    height: 70%;
+    position: relative;
+    overflow: hidden;
+}
+.image-overlay .common-heading{
+    margin: 0;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+}
+/* education-section */
+.education-section{
+    margin-top: 5px;
+}
+.education-section th,td{
+    text-align: center;
+    gap: 5px;
+}
+@media screen and (max-width:320px) {
+    .container{
+        width: 100%;
+        display: flex;
+        flex-direction:column;
+    }
+    .left-section{
+        width: 100%;
+    }
+    .left-section .blue-container{
+        width: 100%;
+        height: 100%;
+    }
+    .left-section .grey-section{
+        width: 100%;
+        height: 100%;
+    }
+    /* .left-section .contact-details{
+        width: 100%;
+        height: 100%;
+    } */
+    .right-section{
+        width: 100%;
+        height: 100%;
+    }
+}
